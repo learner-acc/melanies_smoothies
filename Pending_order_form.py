@@ -37,5 +37,4 @@ if my_dataframe:
 else:
     st.success('There are no pending orders right now', icon = '👍')
 
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
+
