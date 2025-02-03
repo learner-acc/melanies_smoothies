@@ -1,6 +1,7 @@
 # Import python packages
 import streamlit as st
 from snowflake.snowpark.functions import col,when_matched
+import requests
 
 # Write directly to the app
 st.title(":cup_with_straw: Pending Smoothie orders :cup_with_straw:")
@@ -35,3 +36,6 @@ if my_dataframe:
             st.write('Something went wrong.')
 else:
     st.success('There are no pending orders right now', icon = '👍')
+
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
